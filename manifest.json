@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "LockInTube",
+  "description": "Clear all distractions from YouTube for people who want to lock in.",
+  "version": "1.0.0",
+  "icons": {
+    "16": "img/icon.png",
+    "32": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
+  "permissions": ["tabs", "storage", "webNavigation"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": ["*://*/*"]
+}
