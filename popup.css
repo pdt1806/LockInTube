@@ -49,22 +49,28 @@ a {
   text-decoration: underline;
 }
 
+hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 10px 0;
+}
+
 /* ----- checklist styles ----- */
 
 #checklist {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin: 15px 0;
 }
 
 .check-item {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
-label {
+label,
+p {
   font-size: 14px;
   font-weight: 300;
   margin: 0;
@@ -78,4 +84,15 @@ input[type="checkbox"] {
   &:checked {
     accent-color: #fc0032;
   }
+}
+
+/* ----- list styles ----- */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  padding-left: 14px;
+  margin: 5px 0;
 }
